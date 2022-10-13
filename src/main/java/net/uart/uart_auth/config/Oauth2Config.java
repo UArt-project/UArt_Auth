@@ -9,9 +9,9 @@ public class Oauth2Config extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
-
         http
                 .antMatcher("/**").authorizeRequests()
+                .antMatchers("/ping").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .oauth2Login();
