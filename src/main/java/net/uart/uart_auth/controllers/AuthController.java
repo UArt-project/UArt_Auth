@@ -54,7 +54,7 @@ public class AuthController {
                         .queryParam("client_id", CLIENT_ID)
                         .queryParam("redirect_uri", REDIRECT_URI)
                         .queryParam("response_type", "code")
-                        .queryParam("scope", "openid")
+                        .queryParam("scope", "openid email profile")
                         .queryParam("state", state)
                         .encode()
                         .build();
